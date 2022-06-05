@@ -7,14 +7,18 @@ public class Enemy : MonoBehaviour
     public float atackSpeed = 1;
     public GameObject shotPrefab;
     public Vector2 direction;
+    public int health;
 
     private float shootDelay = 10;
     private float nextShootTime;
+    private int maxHealth;
+    private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        maxHealth = health;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -25,7 +29,16 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.GetComponent<PlayerShot>()) {
-            Destroy(gameObject);
+            health -= 1;
+            spriteRenderer.color = new Color(
+                1.0f,
+                1.0f * health / maxHealth,
+                1.0f * health / maxHealth,
+                1.0f
+            );
+            if (health <= 0) {
+                Destroy(gameObject);
+            }
         }
     }
 
