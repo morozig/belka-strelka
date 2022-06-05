@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   columnsCount: 2
-  rowsCount: 4
+  rowsCount: 3
   childPrefab: {fileID: 93048104384563417, guid: 1450fb0be4a9a474392a3d1938070435, type: 3}
   childWidth: 1
   childHeight: 1
