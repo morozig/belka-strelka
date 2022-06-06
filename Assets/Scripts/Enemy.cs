@@ -31,14 +31,16 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.GetComponent<PlayerShot>()) {
-            health -= 1;
-            spriteRenderer.color = new Color(
-                1.0f,
-                1.0f * health / maxHealth,
-                1.0f * health / maxHealth,
-                1.0f
-            );
-            if (health <= 0) {
+            var playerShot = other.GetComponent<PlayerShot>();
+            health -= playerShot.damage;
+            if (health > 0) {
+                spriteRenderer.color = new Color(
+                    1.0f,
+                    1.0f * health / maxHealth,
+                    1.0f * health / maxHealth,
+                    1.0f
+                );
+            } else {
                 Destroy(gameObject);
                 var dropProb = Random.value;
 
