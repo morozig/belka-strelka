@@ -1,6 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
+public enum WeaponColor {
+    Red,
+    Green,
+    Yellow,
+}
 
 public class Player : MonoBehaviour
 {
@@ -12,16 +19,21 @@ public class Player : MonoBehaviour
     public Vector2 topRight;
     public GameObject shotPrefab;
     public Vector2 direction;
+    public int power = 1;
+    public WeaponColor color = WeaponColor.Red;
+    public Sprite[] sprites;
 
     private bool isShooting;
     private float lastShootTime;
     private float shootDelay = 1;
     private GameManager gameManager;
+    private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -104,6 +116,21 @@ public class Player : MonoBehaviour
         if (other.GetComponent<EnemyShot>()) {
             Destroy(other.gameObject);
             gameManager.GameOver();
+        }
+
+        if (other.GetComponent<Bonus>()) {
+            var bonus = other.GetComponent<Bonus>();
+            if (
+                bonus.color == BonusColor.Multi ||
+                (int) bonus.color == (int) color
+            ) {
+                power += 1;
+            } else {
+                color = (WeaponColor) bonus.color;
+                power = (int) Math.Floor(power / 2.0f) + 1;
+                spriteRenderer.sprite = sprites[(int) color];
+            }
+            Destroy(other.gameObject);
         }
     }
 }

@@ -38,8 +38,14 @@ public class GameManager : MonoBehaviour
     {
         var enemiesCount = FindObjectsOfType<Enemy>().Length;
         var enemyShotsCount = FindObjectsOfType<EnemyShot>().Length;
+        var bonusesCount = FindObjectsOfType<Bonus>().Length;
 
-        if (enemiesCount <= 0 && enemyShotsCount <= 0) {
+        var staffCount = (
+            enemiesCount +
+            enemyShotsCount +
+            bonusesCount
+        );
+        if (staffCount <= 0) {
             foreach(var gameObject in waveObjects) {
                 Destroy(gameObject);
             }

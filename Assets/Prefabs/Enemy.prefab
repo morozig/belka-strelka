@@ -148,5 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atackSpeed: 1
   shotPrefab: {fileID: 7238466735523368935, guid: b73d150f9a4ddf2409ce73eb52888cf8, type: 3}
+  bonusPrefab: {fileID: 1426450307417393830, guid: 40d53805d341e984ca1f765b13cf6f44, type: 3}
   direction: {x: 0, y: 0}
   health: 3
+  dropRate: 1

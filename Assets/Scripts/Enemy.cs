@@ -6,8 +6,10 @@ public class Enemy : MonoBehaviour
 {
     public float atackSpeed = 1;
     public GameObject shotPrefab;
+    public GameObject bonusPrefab;
     public Vector2 direction;
     public int health;
+    public float dropRate;
 
     private float shootDelay = 10;
     private float nextShootTime;
@@ -38,6 +40,11 @@ public class Enemy : MonoBehaviour
             );
             if (health <= 0) {
                 Destroy(gameObject);
+                var dropProb = Random.value;
+
+                if (dropProb <= dropRate) {
+                    DropBonus();
+                }
             }
         }
     }
@@ -68,5 +75,16 @@ public class Enemy : MonoBehaviour
                     .direction = direction;
             }
         }
+    }
+
+    private void DropBonus() {
+        var bonus = GameObject.Instantiate(
+            bonusPrefab,
+            transform.position,
+            transform.rotation
+        );
+
+        bonus.GetComponent<MoveInDirection>()
+            .direction = direction;
     }
 }
