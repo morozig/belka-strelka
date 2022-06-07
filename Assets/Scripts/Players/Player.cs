@@ -304,7 +304,7 @@ public class Player : MonoBehaviour
         var scale = damage;
         var offset = new Vector3(
             direction.x,
-            direction.y * 10 * 1.28f
+            direction.y * 5 * 1.28f
         );
 
         var shotPrefab = shotPrefabs[(int) WeaponColor.Yellow];
@@ -317,6 +317,8 @@ public class Player : MonoBehaviour
             playerShot.transform.localScale.x * scale,
             playerShot.transform.localScale.y
         );
+        playerShot.GetComponent<MoveInDirection>()
+            .direction = direction;
         playerShot.GetComponent<PlayerShot>().damage = damage;
     }
 }
