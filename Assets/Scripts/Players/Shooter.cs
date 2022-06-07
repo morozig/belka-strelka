@@ -31,7 +31,8 @@ public class Shooter : MonoBehaviour
     }
 
     private void Shoot() {
-        var atackSpeed = player.atackSpeed;
+        var weaponAtackSpeeds = player.props.weaponAtackSpeeds;
+        var atackSpeed = weaponAtackSpeeds[(int) player.color];
         if (isShooting) {
             var time = Time.time;
             if (
@@ -74,7 +75,8 @@ public class Shooter : MonoBehaviour
         float angle,
         bool isDouble = false
     ) {
-        var shotPrefab = player.shotPrefabs[(int) WeaponColor.Red];
+        var shotPrefabs = player.props.shotPrefabs;
+        var shotPrefab = shotPrefabs[(int) WeaponColor.Red];
         var direction = player.direction;
 
         if (!isDouble) {
@@ -166,8 +168,9 @@ public class Shooter : MonoBehaviour
         if (Mathf.Abs(transform.position.x + offset.x) <= 0.5) {
             return;
         }
+        var shotPrefabs = player.props.shotPrefabs;
+        var shotPrefab = shotPrefabs[(int) WeaponColor.Green];
         var scale = 1 + (damage - 1) * 0.2f;
-        var shotPrefab = player.shotPrefabs[(int) WeaponColor.Green];
         var direction = player.direction;
         var playerShot = GameObject.Instantiate(
             shotPrefab,
@@ -226,7 +229,8 @@ public class Shooter : MonoBehaviour
             direction.y * 5 * 1.28f
         );
 
-        var shotPrefab = player.shotPrefabs[(int) WeaponColor.Yellow];
+        var shotPrefabs = player.props.shotPrefabs;
+        var shotPrefab = shotPrefabs[(int) WeaponColor.Yellow];
         var playerShot = GameObject.Instantiate(
             shotPrefab,
             transform.position + offset,

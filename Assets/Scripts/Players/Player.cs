@@ -10,18 +10,13 @@ public enum WeaponColor {
 
 public class Player : MonoBehaviour
 {
-    public float speed = 20;
-    public float atackSpeed = 2;
-    public float width = 1;
-    public float height = 1;
+    public PlayerProps props;
     public Vector2 bottomLeft;
     public Vector2 topRight;
     public Vector2 direction;
     public int power = 1;
     public WeaponColor color = WeaponColor.Red;
     public Sprite[] sprites;
-    public GameObject[] shotPrefabs;
-
     private GameManager gameManager;
     private SpriteRenderer spriteRenderer;
 
@@ -40,6 +35,8 @@ public class Player : MonoBehaviour
     }
 
     private void BoundMovement() {
+        var width = props.width;
+        var height = props.height;
         var paddedBottomLeft = bottomLeft + new Vector2(
             width / 2,
             height / 2
