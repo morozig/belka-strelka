@@ -5,10 +5,12 @@ using UnityEngine;
 public class KeyboardController : MonoBehaviour
 {
     private Player player;
+    private Shooter shooter;
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<Player>();
+        shooter = GetComponent<Shooter>();
     }
 
     // Update is called once per frame
@@ -30,13 +32,13 @@ public class KeyboardController : MonoBehaviour
             Input.GetKeyDown(KeyCode.Space) ||
             Input.GetKeyDown(KeyCode.LeftShift)
         ) {
-            player.OnShootStart();
+            shooter.OnShootStart();
         }
         if (
             Input.GetKeyUp(KeyCode.Space) ||
             Input.GetKeyDown(KeyCode.LeftShift)
         ) {
-            player.OnShootStop();
+            shooter.OnShootStop();
         }
     }
 }

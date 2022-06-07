@@ -305,6 +305,7 @@ GameObject:
   - component: {fileID: 535823306}
   - component: {fileID: 535823305}
   - component: {fileID: 535823304}
+  - component: {fileID: 535823310}
   m_Layer: 0
   m_Name: Player M
   m_TagString: Untagged
@@ -468,6 +469,18 @@ Transform:
   m_Father: {fileID: 641984000}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &535823310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535823303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81235c89c36cdc4e970c58151f7c335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &641983999
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,6 +729,7 @@ GameObject:
   - component: {fileID: 1708939916}
   - component: {fileID: 1708939920}
   - component: {fileID: 1708939919}
+  - component: {fileID: 1708939921}
   m_Layer: 0
   m_Name: Player K
   m_TagString: Untagged
@@ -878,6 +892,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1708939921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708939914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81235c89c36cdc4e970c58151f7c335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1887973499
 GameObject:
   m_ObjectHideFlags: 0

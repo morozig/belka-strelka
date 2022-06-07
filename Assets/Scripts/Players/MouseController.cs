@@ -5,12 +5,14 @@ using UnityEngine;
 public class MouseController : MonoBehaviour
 {
     private Player player;
+    private Shooter shooter;
     public Camera mainCamera;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<Player>();
+        shooter = GetComponent<Shooter>();
     }
 
     // Update is called once per frame
@@ -35,11 +37,11 @@ public class MouseController : MonoBehaviour
         );
 
         if (Input.GetMouseButtonDown(0)) {
-            player.OnShootStart();
+            shooter.OnShootStart();
         }
 
         if (Input.GetMouseButtonUp(0)) {
-            player.OnShootStop();
+            shooter.OnShootStop();
         }
     }
 }

@@ -10,13 +10,13 @@ public class RedPlayerShot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initialSide = Math.Sign(transform.position.x);
+        initialSide = (int) Mathf.Sign(transform.position.x);
     }
 
     // Update is called once per frame
     void Update()
     {
-        var currentSide = Math.Sign(transform.position.x);
+        var currentSide = (int) Mathf.Sign(transform.position.x);
         if (currentSide != initialSide) {
             Destroy(gameObject);
         }
