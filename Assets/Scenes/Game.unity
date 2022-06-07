@@ -984,6 +984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1996106608}
   - component: {fileID: 1996106607}
+  - component: {fileID: 1996106609}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1003,8 +1004,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751af095e61bd7a4f8aab4616afdd82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platoonPrefab: {fileID: 3056311634975375505, guid: b4a756ee35c2b9c418111015c230a5f7, type: 3}
-  mainCamera: {fileID: 1887973501}
+  levels:
+  - {fileID: 11400000, guid: 2527c417d92ee794895ed535cf83651d, type: 2}
 --- !u!4 &1996106608
 Transform:
   m_ObjectHideFlags: 0
@@ -1020,3 +1021,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1996106609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996106606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e81a3ec090b290f4ab1bad2fed1d9e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1887973501}
+  platoonPrefab: {fileID: 3056311634975375505, guid: b4a756ee35c2b9c418111015c230a5f7, type: 3}

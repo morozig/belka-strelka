@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  columnsCount: 2
-  rowsCount: 3
-  childPrefab: {fileID: 93048104384563417, guid: 1450fb0be4a9a474392a3d1938070435, type: 3}
+  columnsCount: 0
+  rowsCount: 0
+  childPrefab: {fileID: 0}
   childWidth: 1
   childHeight: 1
   direction: {x: 0, y: 0}

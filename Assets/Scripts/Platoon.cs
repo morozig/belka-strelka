@@ -11,13 +11,13 @@ public enum PlatoonState {
 public class Platoon : MonoBehaviour
 {
     public PlatoonState state = PlatoonState.Idle;
-    public int columnsCount = 2;
-    public int rowsCount = 4;
-    public GameObject childPrefab;
-    public float childWidth = 1;
-    public float childHeight = 1;
+    public int columnsCount;
+    public int rowsCount;
     public Vector2 direction;
+    public GameObject childPrefab;
 
+    private float childWidth = 1;
+    private float childHeight = 1;
     private float gap = 1;
     private float speed = 1;
     private float enterSpeed = 10;

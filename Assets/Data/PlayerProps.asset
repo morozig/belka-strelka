@@ -21,5 +21,5 @@ MonoBehaviour:
   - {fileID: 3731398295780142374, guid: 9be3e0e0db69ce042afd82e736b0aa78, type: 3}
   weaponAtackSpeeds:
   - 2
-  - 2
+  - 1.8
   - 0.5
