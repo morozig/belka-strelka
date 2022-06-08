@@ -13,9 +13,9 @@ public class AlienBasic : MonoBehaviour
     public GameObject shotPrefab;
     public UnitBasicState state = UnitBasicState.Idle;
     public float joinSpeed = 3;
+    public float shootDelay = 20;
 
     private Enemy enemy;
-    private float shootDelay = 10;
     private float nextShootTime;
 
     private Vector3 platoonPosition;
