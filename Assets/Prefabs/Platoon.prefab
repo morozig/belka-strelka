@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3056311634975375535}
   - component: {fileID: 3056311634975375504}
+  - component: {fileID: 3794843302961289731}
   m_Layer: 0
   m_Name: Platoon
   m_TagString: Untagged
@@ -44,10 +45,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1778afd0ec7b74c84d3656e4958f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
   columnsCount: 0
   rowsCount: 0
-  childPrefab: {fileID: 0}
-  childWidth: 1
-  childHeight: 1
   direction: {x: 0, y: 0}
+  childPrefab: {fileID: 0}
+--- !u!114 &3794843302961289731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056311634975375505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce84d673a0a192a48a52544988a34402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  speed: 1
+  width: 0
+  height: 0
+  bottomLeft: {x: 0, y: 0}
+  topRight: {x: 0, y: 0}

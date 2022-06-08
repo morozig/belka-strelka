@@ -10,15 +10,46 @@ public class SpawnManager : MonoBehaviour
     private List<GameObject> platoons = new List<GameObject>();
     public bool IsActive { get; private set; }
 
-    private float width;
-    private float height;
+    private float _width;
+    private float _height;
     private float border = 0.2f;
+
+    private bool isInitialized;
+    private bool isWaveSpawning;
+
+    private float Width {
+        get {
+            if (isInitialized) {
+                return _width;
+            } else {
+                Initialize();
+                return _width;
+            }
+        }
+    }
+    private float Height {
+        get {
+            if (isInitialized) {
+                return _height;
+            } else {
+                Initialize();
+                return _height;
+            }
+        }
+    }
+
+    private void Initialize() {
+        if (!isInitialized) {
+            _height = mainCamera.orthographicSize * 2;
+            _width = mainCamera.aspect * _height;
+            isInitialized = true;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        height = mainCamera.orthographicSize * 2;
-        width = mainCamera.aspect * height;
+        Initialize();
     }
 
     // Update is called once per frame
@@ -34,16 +65,20 @@ public class SpawnManager : MonoBehaviour
                 enemyShotsCount +
                 bonusesCount
             );
+
             if (staffCount <= 0) {
-                foreach(var gameObject in platoons) {
-                    Destroy(gameObject);
+                if (!isWaveSpawning) {
+                    foreach(var gameObject in platoons) {
+                        Destroy(gameObject);
+                    }
+                    platoons.Clear();
+                    IsActive = false;
                 }
-                platoons.Clear();
-                IsActive = false;
+            } else {
+                isWaveSpawning = false;
             }
         }
     }
-
     
     private (
         Vector2 bottomLeft,
@@ -56,8 +91,8 @@ public class SpawnManager : MonoBehaviour
                     border / 2
                 );
                 var topRight = new Vector2(
-                    width / 2,
-                    height / 2
+                    Width / 2,
+                    Height / 2
                 );
                 return (
                     bottomLeft,
@@ -66,8 +101,8 @@ public class SpawnManager : MonoBehaviour
             }
             case GameQuadrant.BottomLeft: {
                 var bottomLeft = new Vector2(
-                    - width / 2,
-                    - height / 2
+                    - Width / 2,
+                    - Height / 2
                 );
                 var topRight = new Vector2(
                     - border / 2,
@@ -89,18 +124,31 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+    private Vector2 GetDirection (GameQuadrant quadrant) {
+        switch (quadrant) {
+            case GameQuadrant.TopRight: 
+            case GameQuadrant.BottomRight: 
+                return Vector2.left;
+            case GameQuadrant.BottomLeft:
+            case GameQuadrant.TopLeft:
+                return Vector2.right;
+            default:
+                return new Vector2();
+        }
+    }
+
     private Vector3 GetStartPoint (GameQuadrant quadrant) {
         switch (quadrant) {
             case GameQuadrant.TopRight: {
                 return new Vector3(
-                    Random.Range(0, width / 2),
-                    Random.Range(height * 0.75f, height)
+                    Random.Range(0, Width / 2),
+                    Random.Range(Height * 0.75f, Height)
                 );
             }
             case GameQuadrant.BottomLeft: {
                 return new Vector3(
-                    Random.Range(- width / 2, 0),
-                    Random.Range(- height, - height * 0.75f)
+                    Random.Range(- Width / 2, 0),
+                    Random.Range(- Height, - Height * 0.75f)
                 );
             }
             default: {
@@ -109,46 +157,57 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    public void SpawnWave(Wave wave) {
-        IsActive = true;
-
-        var topRightPlatoon = GameObject.Instantiate(
+    private GameObject SpawnQuadrant(
+        Wave wave,
+        GameQuadrant gameQuadrant
+    ) {
+        var bounds = GetBounds(gameQuadrant);
+        var direction = GetDirection(gameQuadrant);
+        var platoonObj = GameObject.Instantiate(
             platoonPrefab,
-            GetStartPoint(GameQuadrant.TopRight),
+            GetStartPoint(gameQuadrant),
             platoonPrefab.transform.rotation
         );
-        var topRightBounds = GetBounds(GameQuadrant.TopRight);
-        var topRightScript = topRightPlatoon.GetComponent<Platoon>();
-        topRightScript.direction = Vector2.left;
-        topRightScript.childPrefab = wave.platoonUnitPrefab;
-        topRightScript.columnsCount = wave.platoonColumns;
-        topRightScript.rowsCount = wave.platoonRows;
-        topRightScript.SetBounds(
-            topRightBounds.bottomLeft,
-            topRightBounds.topRight
-        );
+        var platoon = platoonObj.GetComponent<Platoon>();
+        platoon.direction = direction;
+        platoon.childPrefab = wave.platoonUnitPrefab;
+        platoon.columnsCount = wave.platoonColumns;
+        platoon.rowsCount = wave.platoonRows;
+        platoon.isFull = wave.isPlatoonFull;
+        var platoonRoaming = platoonObj.GetComponent<Roaming>();
+        platoonRoaming.bottomLeft = bounds.bottomLeft;
+        platoonRoaming.topRight = bounds.topRight;
 
+        if (wave.roamingUnitsCount > 0) {
+            for (var i = 0; i < wave.roamingUnitsCount; i++) {
+                var unitObj = GameObject.Instantiate(
+                    wave.roamingUnitPrefab,
+                    GetStartPoint(gameQuadrant),
+                    wave.roamingUnitPrefab.transform.rotation
+                );
+                var enemy = unitObj.GetComponent<Enemy>();
+                enemy.direction = direction;
+                enemy.platoonObj = platoonObj;
+                var unitRoaming = unitObj.GetComponent<Roaming>();
+                unitRoaming.bottomLeft = bounds.bottomLeft;
+                unitRoaming.topRight = bounds.topRight;
+            }
+        }
+        return platoonObj;
+    }
+
+    public void SpawnWave(Wave wave) {
+        var topRightPlatoon = SpawnQuadrant(
+            wave,
+            GameQuadrant.TopRight
+        );
         platoons.Add(topRightPlatoon);
-
-        var bottomLeftPlatoon = GameObject.Instantiate(
-            platoonPrefab,
-            GetStartPoint(GameQuadrant.BottomLeft),
-            Quaternion.Inverse(platoonPrefab.transform.rotation)
-        );
-        var bottomLeftBounds = GetBounds(GameQuadrant.BottomLeft);
-        var bottomLeftScript = bottomLeftPlatoon.GetComponent<Platoon>();
-        bottomLeftScript.SetBounds(
-            bottomLeftBounds.bottomLeft,
-            bottomLeftBounds.topRight
-        );
-        bottomLeftScript.direction = Vector2.right;
-        bottomLeftScript.childPrefab = wave.platoonUnitPrefab;
-        bottomLeftScript.columnsCount = wave.platoonColumns;
-        bottomLeftScript.rowsCount = wave.platoonRows;
-        bottomLeftScript.SetBounds(
-            bottomLeftBounds.bottomLeft,
-            bottomLeftBounds.topRight
+        var bottomLeftPlatoon = SpawnQuadrant(
+            wave,
+            GameQuadrant.BottomLeft
         );
         platoons.Add(bottomLeftPlatoon);
+        isWaveSpawning = true;
+        IsActive = true;
     }
 }

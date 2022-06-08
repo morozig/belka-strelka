@@ -15,14 +15,18 @@ public class GameManager : MonoBehaviour
     public Level[] levels;
 
     private SpawnManager spawnManager;
-    private int levelIndex;
-    private int waveIndex;
+    private int levelIndex = 0;
+    private int waveIndex = 0;
+
+    private void Initialize() {
+        Random.Range(0, 1);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         spawnManager = GetComponent<SpawnManager>();
-
+        Initialize();
         spawnManager.SpawnWave(levels[levelIndex].waves[waveIndex]);
     }
 
