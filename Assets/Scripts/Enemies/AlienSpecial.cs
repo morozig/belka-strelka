@@ -14,7 +14,6 @@ public class AlienSpecial : MonoBehaviour
     {
         enemy = GetComponent<Enemy>();
         roaming = GetComponent<Roaming>();
-        roaming.idleOnStop = true;
     }
 
     // Update is called once per frame

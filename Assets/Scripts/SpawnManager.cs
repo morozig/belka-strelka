@@ -163,20 +163,23 @@ public class SpawnManager : MonoBehaviour
     ) {
         var bounds = GetBounds(gameQuadrant);
         var direction = GetDirection(gameQuadrant);
-        var platoonObj = GameObject.Instantiate(
-            platoonPrefab,
-            GetStartPoint(gameQuadrant),
-            platoonPrefab.transform.rotation
-        );
-        var platoon = platoonObj.GetComponent<Platoon>();
-        platoon.direction = direction;
-        platoon.childPrefab = wave.platoonUnitPrefab;
-        platoon.columnsCount = wave.platoonColumns;
-        platoon.rowsCount = wave.platoonRows;
-        platoon.isFull = wave.isPlatoonFull;
-        var platoonRoaming = platoonObj.GetComponent<Roaming>();
-        platoonRoaming.bottomLeft = bounds.bottomLeft;
-        platoonRoaming.topRight = bounds.topRight;
+        GameObject platoonObj = null;
+        if (platoonPrefab) {
+            platoonObj = GameObject.Instantiate(
+                platoonPrefab,
+                GetStartPoint(gameQuadrant),
+                platoonPrefab.transform.rotation
+            );
+            var platoon = platoonObj.GetComponent<Platoon>();
+            platoon.direction = direction;
+            platoon.childPrefab = wave.platoonUnitPrefab;
+            platoon.columnsCount = wave.platoonColumns;
+            platoon.rowsCount = wave.platoonRows;
+            platoon.isFull = wave.isPlatoonFull;
+            var platoonRoaming = platoonObj.GetComponent<Roaming>();
+            platoonRoaming.bottomLeft = bounds.bottomLeft;
+            platoonRoaming.topRight = bounds.topRight;
+        }
 
         if (wave.roamingUnitsCount > 0) {
             for (var i = 0; i < wave.roamingUnitsCount; i++) {
