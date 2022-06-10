@@ -96,5 +96,25 @@ public class Player : MonoBehaviour
             }
             Destroy(other.gameObject);
         }
+
+        if (other.GetComponent<JokerShot>()) {
+            var jokerShot = other.GetComponent<JokerShot>();
+            if (jokerShot.type == JokerType.Bomb) {
+                Destroy(other.gameObject);
+                gameManager.GameOver();
+            } else {
+                if (
+                    jokerShot.type == JokerType.BonusMulti ||
+                    (int) jokerShot.type == (int) color
+                ) {
+                    power += 1;
+                } else {
+                    color = (WeaponColor) jokerShot.type;
+                    power = (int) Mathf.Floor(power / 2.0f) + 1;
+                    spriteRenderer.sprite = sprites[(int) color];
+                }
+                Destroy(other.gameObject);
+            }
+        }
     }
 }
