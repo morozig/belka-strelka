@@ -1006,6 +1006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - {fileID: 11400000, guid: 2527c417d92ee794895ed535cf83651d, type: 2}
+  - {fileID: 11400000, guid: 075be38986eb67e48bc4ee6a998eaa21, type: 2}
 --- !u!4 &1996106608
 Transform:
   m_ObjectHideFlags: 0

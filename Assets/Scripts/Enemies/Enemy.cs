@@ -18,6 +18,9 @@ public class Enemy : MonoBehaviour
     {
         maxHealth = health;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (Vector2.Dot(direction, Vector2.right) == 1) {
+            spriteRenderer.flipX = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
