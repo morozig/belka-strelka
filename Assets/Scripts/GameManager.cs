@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     private int waveIndex = 0;
 
     private void Initialize() {
-        Random.Range(0, 1);
+        Random.Range(0, 2);
     }
 
     // Start is called before the first frame update

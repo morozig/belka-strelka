@@ -22,6 +22,7 @@ public class Platoon : MonoBehaviour
     public Vector2 direction;
     public GameObject childPrefab;
     public bool isFull;
+    public int emptyCount = 0;
 
     private float childWidth = 1;
     private float childHeight = 1;
@@ -89,8 +90,8 @@ public class Platoon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var emptyCount = places.Count(place => place.unitObj == null);
-
+        emptyCount = places.Count(place => place.unitObj == null);
+        
         isFull = (emptyCount <= 0);
     }
 

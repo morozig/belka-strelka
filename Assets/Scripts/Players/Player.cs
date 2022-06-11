@@ -83,7 +83,9 @@ public class Player : MonoBehaviour
         }
 
         if (other.GetComponent<Bonus>()) {
+            Debug.Log("Was " + color + " int " + (int) color);
             var bonus = other.GetComponent<Bonus>();
+            Debug.Log("Bonus " + bonus.color + " int " + (int) bonus.color);
             if (
                 bonus.color == BonusColor.Multi ||
                 (int) bonus.color == (int) color
@@ -94,6 +96,7 @@ public class Player : MonoBehaviour
                 power = (int) Mathf.Floor(power / 2.0f) + 1;
                 spriteRenderer.sprite = sprites[(int) color];
             }
+            Debug.Log("Became " + color + " int " + (int) color);
             Destroy(other.gameObject);
         }
 

@@ -115,4 +115,9 @@ public class PirateBasic : MonoBehaviour
             }
         }
     }
+
+    public void JoinPlatoon(Vector3 position) {
+        platoonPosition = position;
+        state = PirateBasicState.Joining;
+    }
 }
