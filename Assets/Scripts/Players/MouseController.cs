@@ -18,7 +18,7 @@ public class MouseController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var speed = player.props.speed;
+        var speed = player.speed;
         var mousePosition = Input.mousePosition;
         var unitPixels = Screen.height / mainCamera.orthographicSize / 2;
 

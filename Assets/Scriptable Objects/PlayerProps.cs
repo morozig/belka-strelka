@@ -10,4 +10,6 @@ public class PlayerProps : ScriptableObject
     public float height = 1;
     public GameObject[] shotPrefabs;
     public float[] weaponAtackSpeeds;
+    public float stunSpeed = 1;
+    public float stunDuration = 1;
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platoonUnitPrefab: {fileID: 1164754858138162053, guid: 41aa22196eadbaf43a43fa69591c91be, type: 3}
   platoonColumns: 8
-  platoonRows: 4
+  platoonRows: 3
   isPlatoonFull: 1
   roamingUnitPrefab: {fileID: 8898422334663537673, guid: 6fcdca6a98d133444970e9139d1a74b8, type: 3}
   roamingUnitsCount: 2

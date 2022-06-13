@@ -16,7 +16,7 @@ public class KeyboardController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var speed = player.props.speed;
+        var speed = player.speed;
         var horizontalInput = Input.GetAxis("Horizontal");
         var verticalInput = Input.GetAxis("Vertical");
         

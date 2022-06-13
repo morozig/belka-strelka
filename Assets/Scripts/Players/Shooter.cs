@@ -33,7 +33,7 @@ public class Shooter : MonoBehaviour
     private void Shoot() {
         var weaponAtackSpeeds = player.props.weaponAtackSpeeds;
         var atackSpeed = weaponAtackSpeeds[(int) player.color];
-        if (isShooting) {
+        if (isShooting && !player.isStunned) {
             var time = Time.time;
             if (
                 lastShootTime <= 0 ||

@@ -10,7 +10,6 @@ public class PirateBoss : MonoBehaviour
 
     private Enemy enemy;
     private Roaming roaming;
-    private bool isFlipped;
     private float minAngle = -45;
     private float maxAngle = 45;
 
@@ -19,7 +18,6 @@ public class PirateBoss : MonoBehaviour
     {
         enemy = GetComponent<Enemy>();
         roaming = GetComponent<Roaming>();
-        isFlipped = Vector2.Dot(enemy.direction, Vector2.right) == 1;
     }
 
     // Update is called once per frame
@@ -68,11 +66,7 @@ public class PirateBoss : MonoBehaviour
 
     void Spawn() {
         foreach (Vector3 exit in exits) {
-            var offset = new Vector3(
-                isFlipped ? -exit.x : exit.x,
-                exit.y
-            );
-            SpawnPirate(offset);
+            SpawnPirate(exit);
         }
     }
 
@@ -96,11 +90,7 @@ public class PirateBoss : MonoBehaviour
     void Shoot() {
         var angle = minAngle + Random.Range(1, maxAngle - minAngle);
         foreach (Vector3 exit in exits) {
-            var offset = new Vector3(
-                isFlipped ? -exit.x : exit.x,
-                exit.y
-            );
-            ShootAngle(angle, offset);
+            ShootAngle(angle, exit);
         }
     }
 }

@@ -17,21 +17,27 @@ public class Player : MonoBehaviour
     public int power = 1;
     public WeaponColor color = WeaponColor.Red;
     public Sprite[] sprites;
+    public bool isStunned;
+    public float speed;
+
     private GameManager gameManager;
     private SpriteRenderer spriteRenderer;
-
+    private float stunTime;
+    private int greyIndex = 3;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        speed = props.speed;
     }
 
     // Update is called once per frame
     void Update()
     {
         BoundMovement();
+        Stunned();
     }
 
     private void BoundMovement() {
@@ -117,6 +123,25 @@ public class Player : MonoBehaviour
                     spriteRenderer.sprite = sprites[(int) color];
                 }
                 Destroy(other.gameObject);
+            }
+        }
+
+        if (other.GetComponent<StunShot>()) {
+            Destroy(other.gameObject);
+            isStunned = true;
+            stunTime = Time.time;
+            spriteRenderer.sprite = sprites[greyIndex];
+            speed = props.stunSpeed;
+        }
+    }
+
+    private void Stunned() {
+        if (isStunned) {
+            if ((Time.time - stunTime) > props.stunDuration) {
+                isStunned = false;
+                stunTime = -props.stunDuration;
+                spriteRenderer.sprite = sprites[(int) color];
+                speed = props.speed;
             }
         }
     }
