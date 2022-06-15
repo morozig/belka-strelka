@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public int health;
     public float dropRate;
     public GameObject platoonObj;
+    public bool flipRight;
 
     private int maxHealth;
     private SpriteRenderer spriteRenderer;
@@ -18,7 +19,7 @@ public class Enemy : MonoBehaviour
     {
         maxHealth = health;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        if (Vector2.Dot(direction, Vector2.right) == 1) {
+        if (flipRight && Vector2.Dot(direction, Vector2.right) == 1) {
             spriteRenderer.flipX = true;
         }
     }

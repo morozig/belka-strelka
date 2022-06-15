@@ -127,6 +127,7 @@ MonoBehaviour:
   health: 40
   dropRate: 1
   platoonObj: {fileID: 0}
+  flipRight: 1
 --- !u!114 &2210969135034588042
 MonoBehaviour:
   m_ObjectHideFlags: 0

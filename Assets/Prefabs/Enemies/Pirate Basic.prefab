@@ -170,3 +170,4 @@ MonoBehaviour:
   health: 4
   dropRate: 0.1
   platoonObj: {fileID: 0}
+  flipRight: 1

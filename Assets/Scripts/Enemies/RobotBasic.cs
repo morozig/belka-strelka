@@ -50,18 +50,25 @@ public class RobotBasic : MonoBehaviour
             }
         }
 
-        if (enemy.health < maxHealth) {
-            if (state == RobotBasicState.Serving) {
-                GenerateNextPoint();
-                state = RobotBasicState.Roaming;
-            }
-        }
+        Leave();
         Join();
         Shoot();
         Roam();
     }
 
     
+    private void Leave() {
+        if (state == RobotBasicState.Serving) {
+            if (enemy.health < maxHealth) {
+                var platoon = enemy.platoonObj.GetComponent<Platoon>();
+                platoon.Leave(gameObject);
+                transform.parent = null;
+                GenerateNextPoint();
+                state = RobotBasicState.Roaming;
+            }
+        }
+    }
+
     private void Join() {
         if (state == RobotBasicState.Joining) {
             var toPosition = (
@@ -143,4 +150,23 @@ public class RobotBasic : MonoBehaviour
         );
     }
 
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.GetComponent<RobotSpecial>()) {
+            if (enemy.health < maxHealth) {
+                enemy.health = maxHealth;
+                var platoon = enemy.platoonObj.GetComponent<Platoon>();
+                transform.parent = enemy.platoonObj.transform;
+                platoonPosition = platoon.Join(gameObject);
+
+                var spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.color = new Color(
+                    1.0f,
+                    1.0f,
+                    1.0f,
+                    1.0f
+                );
+                state = RobotBasicState.Joining;
+            }
+        }
+    }
 }
