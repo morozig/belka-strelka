@@ -18,12 +18,6 @@ public class GreenPlayerShot : MonoBehaviour
         spriteRenderer.sprite = sprites[DamageToSpriteIndex(damage)];
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.GetComponent<Enemy>()) {
             var enemy = other.GetComponent<Enemy>();

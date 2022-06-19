@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="player-shot--yellow4.svg"
+   inkscape:export-filename="player-shot--yellow4.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#5260e6"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     showborder="true"
+     inkscape:zoom="2.6456983"
+     inkscape:cx="-9.6382872"
+     inkscape:cy="60.853499"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid28123" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient31197">
+      <stop
+         style="stop-color:#e8ff00;stop-opacity:0;"
+         offset="0"
+         id="stop31193" />
+      <stop
+         style="stop-color:#e8ff00;stop-opacity:1;"
+         offset="0.15000001"
+         id="stop6340" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0.2"
+         id="stop6342" />
+      <stop
+         style="stop-color:#e8ff00;stop-opacity:1;"
+         offset="0.25"
+         id="stop6344" />
+      <stop
+         style="stop-color:#e8ff00;stop-opacity:0.24705882;"
+         offset="0.30000001"
+         id="stop6346" />
+      <stop
+         style="stop-color:#e8ff00;stop-opacity:1;"
+         offset="0.35083875"
+         id="stop4141" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0.39812991"
+         id="stop4137" />
+      <stop
+         style="stop-color:#e8ff00;stop-opacity:1;"
+         offset="0.45013124"
+         id="stop31224" />
+      <stop
+         style="stop-color:#e8ff00;stop-opacity:0.24705882;"
+         offset="0.49559236"
+         id="stop4145" />
+      <stop
+         style="stop-color:#e8ff00;stop-opacity:1;"
+         offset="0.55113137"
+         id="stop4147" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0.59617168"
+         id="stop4139" />
+      <stop
+         style="stop-color:#e8ff00;stop-opacity:1;"
+         offset="0.64708382"
+         id="stop4143" />
+      <stop
+         style="stop-color:#e8ff00;stop-opacity:0.2489083;"
+         offset="0.69816273"
+         id="stop31246" />
+      <stop
+         style="stop-color:#e8ff00;stop-opacity:1;"
+         offset="0.75"
+         id="stop6348" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0.80000001"
+         id="stop6350" />
+      <stop
+         style="stop-color:#e8ff00;stop-opacity:1;"
+         offset="0.85000002"
+         id="stop6352" />
+      <stop
+         style="stop-color:#e8ff00;stop-opacity:0;"
+         offset="1"
+         id="stop31248" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient31197"
+       id="linearGradient31199"
+       x1="0.19109668"
+       y1="64.09555"
+       x2="128"
+       y2="64.09555"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#linearGradient31199);fill-opacity:1;stroke:none;stroke-width:5.49795;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="rect30458"
+       width="127.80891"
+       height="127.80891"
+       x="0.19109668"
+       y="0.19109668" />
+  </g>
+  <metadata
+     id="metadata9">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
