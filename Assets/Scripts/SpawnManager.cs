@@ -13,6 +13,7 @@ public class SpawnManager : MonoBehaviour
     private float _width;
     private float _height;
     private float border = 0.2f;
+    private float aspect = 16f / 9f;
 
     private bool isInitialized;
     private bool isWaveSpawning;
@@ -40,8 +41,9 @@ public class SpawnManager : MonoBehaviour
 
     private void Initialize() {
         if (!isInitialized) {
+            mainCamera.aspect = aspect;
             _height = mainCamera.orthographicSize * 2;
-            _width = mainCamera.aspect * _height;
+            _width = aspect * _height;
             isInitialized = true;
         }
     }

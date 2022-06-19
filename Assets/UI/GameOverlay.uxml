@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/GameOverlay.style.uss?fileID=7433441132597879392&amp;guid=723e642dc772ce44694e5608298124e0&amp;type=3#GameOverlay.style" />
+    <ui:VisualElement class="TopBar">
+        <ui:VisualElement class="Heart" />
+        <ui:Label text="03" display-tooltip-when-elided="true" name="Lives" class="Text" />
+    </ui:VisualElement>
+</ui:UXML>
