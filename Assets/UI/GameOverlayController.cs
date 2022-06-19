@@ -5,6 +5,8 @@ public class GameOverlayController
     private VisualElement visualElement;
     private Label livesLabel;
 
+    private int livesLenth = 2;
+
     public GameOverlayController(VisualElement visualElement)
     {
         this.visualElement = visualElement;
@@ -12,8 +14,8 @@ public class GameOverlayController
         livesLabel = visualElement.Q<Label>("Lives");
     }
 
-    public void SetLives(string lives)
+    public void SetLives(int lives)
     {
-        livesLabel.text = lives;
+        livesLabel.text = lives.ToString($"D{livesLenth}");
     }
 }

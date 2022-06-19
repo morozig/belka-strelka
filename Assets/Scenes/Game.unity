@@ -338,6 +338,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2742fac5fd9a1394fb78f08a3a363338, type: 3}
   isStunned: 0
   speed: 0
+  gameManagerObj: {fileID: 1996106606}
 --- !u!114 &535823305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -688,7 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daef732f52345774abac5dc6e8fb72cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexTemplate: {fileID: 9197481963319205126, guid: 81e0335297b3d7f4fb340cba76d0146f, type: 3}
+  gameManagerObj: {fileID: 1996106606}
 --- !u!1 &1529953022
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,6 +836,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0f8e1f052a5b7384fac0da292cd32c2c, type: 3}
   isStunned: 0
   speed: 0
+  gameManagerObj: {fileID: 1996106606}
 --- !u!114 &1708939917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1076,6 +1078,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2527c417d92ee794895ed535cf83651d, type: 2}
   - {fileID: 11400000, guid: 075be38986eb67e48bc4ee6a998eaa21, type: 2}
   - {fileID: 11400000, guid: be77321035d428541ba4201a57cc4929, type: 2}
+  lives: 3
 --- !u!4 &1996106608
 Transform:
   m_ObjectHideFlags: 0

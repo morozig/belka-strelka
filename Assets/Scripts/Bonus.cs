@@ -17,7 +17,7 @@ public class Bonus : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private MoveInDirection moveInDirection;
-    private float horizontalBound = 30;
+    private float horizontalBound = 17.7f;
 
     // Start is called before the first frame update
     void Start()

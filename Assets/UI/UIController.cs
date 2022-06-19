@@ -15,7 +15,7 @@ public class UIController
         gameOverlayController = new GameOverlayController(gameOverlay);
     }
 
-    public void SetLives(string lives)
+    public void SetLives(int lives)
     {
         gameOverlayController.SetLives(lives);
     }

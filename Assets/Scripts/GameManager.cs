@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 {
     public bool IsOver { get; private set; }
     public Level[] levels;
+    public int lives = 3;
 
     private SpawnManager spawnManager;
     private int levelIndex = 0;
@@ -48,8 +49,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GameOver() {
-        Debug.Log("Game Over");
-        IsOver = false;
+    public void DamagePlayer() {
+        lives -= 1;
+        if (lives <= 0) {
+            Debug.Log("Game Over");
+            IsOver = false;
+        }
     }
 }

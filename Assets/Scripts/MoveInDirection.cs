@@ -7,7 +7,7 @@ public class MoveInDirection : MonoBehaviour
     public float speed = 1;
     public Vector2 direction;
 
-    private float horizontalBound = 31;
+    private float horizontalBound = 18.5f;
     private float verticalBound = 10;
 
     // Start is called before the first frame update

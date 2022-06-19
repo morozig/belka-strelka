@@ -19,16 +19,17 @@ public class Player : MonoBehaviour
     public Sprite[] sprites;
     public bool isStunned;
     public float speed;
+    public GameObject gameManagerObj;
 
-    private GameManager gameManager;
     private SpriteRenderer spriteRenderer;
     private float stunTime;
     private int greyIndex = 3;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
+        gameManager = gameManagerObj.GetComponent<GameManager>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         speed = props.speed;
     }
@@ -85,7 +86,13 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.GetComponent<EnemyShot>()) {
             Destroy(other.gameObject);
-            gameManager.GameOver();
+
+            power = Mathf.Max(
+                (int) Mathf.Floor(power / 2.0f),
+                1
+            );
+
+            gameManager.DamagePlayer();
         }
 
         if (other.GetComponent<Bonus>()) {
@@ -110,7 +117,7 @@ public class Player : MonoBehaviour
             var jokerShot = other.GetComponent<JokerShot>();
             if (jokerShot.type == JokerType.Bomb) {
                 Destroy(other.gameObject);
-                gameManager.GameOver();
+                gameManager.DamagePlayer();
             } else {
                 if (
                     jokerShot.type == JokerType.BonusMulti ||
