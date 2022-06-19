@@ -18,6 +18,7 @@ public class Bonus : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private MoveInDirection moveInDirection;
     private float horizontalBound = 17.7f;
+    private bool isBoosted;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,15 @@ public class Bonus : MonoBehaviour
             );
             transform.position = mirroredPosition;
             isMirrored = true;
+        }
+    }
+
+    public void BoostSpeed() {
+        if (!isBoosted) {
+            isBoosted = true;
+            if (!isMirrored) {
+                moveInDirection.speed = 4;
+            }
         }
     }
 }

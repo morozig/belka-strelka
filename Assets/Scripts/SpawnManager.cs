@@ -17,6 +17,7 @@ public class SpawnManager : MonoBehaviour
 
     private bool isInitialized;
     private bool isWaveSpawning;
+    private bool isBonusesBoosted;
 
     private float Width {
         get {
@@ -60,7 +61,20 @@ public class SpawnManager : MonoBehaviour
         if (IsActive) {
             var enemiesCount = FindObjectsOfType<Enemy>().Length;
             var enemyShotsCount = FindObjectsOfType<EnemyShot>().Length;
-            var bonusesCount = FindObjectsOfType<Bonus>().Length;
+            var bonuses = FindObjectsOfType<Bonus>();
+            var bonusesCount = bonuses.Length;
+
+            if (
+                !isBonusesBoosted &&
+                enemiesCount == 0 &&
+                enemyShotsCount == 0 &&
+                bonusesCount > 0
+            ) {
+                foreach(var bonusObj in bonuses) {
+                    var bonus = bonusObj.GetComponent<Bonus>();
+                    bonus.BoostSpeed();
+                }
+            }
 
             var staffCount = (
                 enemiesCount +
