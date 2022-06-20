@@ -169,7 +169,7 @@ MonoBehaviour:
   stunPrefab: {fileID: 1426450307417393830, guid: 913200a450c1bab49b2f6a47f7ca0822, type: 3}
   state: 0
   joinSpeed: 3
-  roamSpeed: 1
+  roamSpeed: 2
   shootDelay: 20
   width: 1
   height: 1

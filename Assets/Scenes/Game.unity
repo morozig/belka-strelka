@@ -478,6 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81235c89c36cdc4e970c58151f7c335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponLevelStops: 0100000002000000040000000800000010000000
 --- !u!1 &641983999
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,6 +961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81235c89c36cdc4e970c58151f7c335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponLevelStops: 0100000002000000040000000800000010000000
 --- !u!1 &1887973499
 GameObject:
   m_ObjectHideFlags: 0

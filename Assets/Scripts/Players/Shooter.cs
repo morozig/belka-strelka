@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
+    public int[] weaponLevelStops = { 1, 2, 4, 8, 16 };
+
     private Player player;
     private bool isShooting;
     private float lastShootTime;
     private float shootDelay = 1;
-    private int[] weaponLevelStops = { 1, 2, 5, 10, 20 };
 
     // Start is called before the first frame update
     void Start()

@@ -20,6 +20,8 @@ MonoBehaviour:
   - {fileID: 2136710959173252721, guid: 024e5d139ebfe1d4b89749486f2b177d, type: 3}
   - {fileID: 3731398295780142374, guid: 9be3e0e0db69ce042afd82e736b0aa78, type: 3}
   weaponAtackSpeeds:
+  - 1.5
   - 2
-  - 1.8
-  - 0.5
+  - 1
+  stunSpeed: 1
+  stunDuration: 1
