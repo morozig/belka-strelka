@@ -1,0 +1,39 @@
+VisualElement {
+}
+
+.Container {
+    flex-grow: 1;
+    background-image: url('project://database/Assets/Sprites/UI/menu-screen.png?fileID=21300000&guid=7c29aea24356e6a408e119baa8a168d3&type=3#menu-screen');
+}
+
+.Title {
+    position: absolute;
+    color: rgba(255, 249, 249, 255);
+    font-size: 30px;
+    -unity-text-align: upper-center;
+    width: 100%;
+    top: 10%;
+}
+
+.Controls {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    translate: -50% 0;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    top: 30%;
+}
+
+.Button {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.Button:hover {
+    background-color: rgba(62, 126, 231, 255);
+}

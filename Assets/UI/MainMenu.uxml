@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/MainMenu.style.uss?fileID=7433441132597879392&amp;guid=fc33e7b74efa4dd4399ba44663db80ae&amp;type=3#MainMenu.style" />
+    <ui:VisualElement class="Container" />
+    <ui:Label text="Belka &amp; Strelka" display-tooltip-when-elided="true" class="Title" />
+    <ui:VisualElement class="Controls">
+        <ui:Button text="START" display-tooltip-when-elided="true" name="Start" class="Button" />
+    </ui:VisualElement>
+</ui:UXML>

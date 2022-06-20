@@ -9,11 +9,17 @@ public enum GameQuadrant {
     BottomLeft,
 }
 
+public enum GameState {
+    Idle,
+    Running,
+    Over,
+}
+
 public class GameManager : MonoBehaviour
 {
-    public bool IsOver { get; private set; }
     public Level[] levels;
     public int lives = 3;
+    public GameState State { get; private set; } = GameState.Idle;
 
     private SpawnManager spawnManager;
     private int levelIndex = 0;
@@ -28,13 +34,12 @@ public class GameManager : MonoBehaviour
     {
         spawnManager = GetComponent<SpawnManager>();
         Initialize();
-        spawnManager.SpawnWave(levels[levelIndex].waves[waveIndex]);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!IsOver && !spawnManager.IsActive) {
+        if (State == GameState.Running && !spawnManager.IsActive) {
             waveIndex += 1;
             if (waveIndex >= levels[levelIndex].waves.Length) {
                 waveIndex = 0;
@@ -44,7 +49,7 @@ public class GameManager : MonoBehaviour
                 spawnManager.SpawnWave(levels[levelIndex].waves[waveIndex]);
             } else {
                 Debug.Log("Victory!");
-                IsOver = true;
+                State = GameState.Over;
             }
         }
     }
@@ -53,7 +58,14 @@ public class GameManager : MonoBehaviour
         lives -= 1;
         if (lives <= 0) {
             Debug.Log("Game Over");
-            IsOver = false;
+            State = GameState.Over;
         }
+    }
+
+    public void StartGame() {
+        State = GameState.Running;
+        levelIndex = 0;
+        waveIndex = 0;
+        spawnManager.SpawnWave(levels[levelIndex].waves[waveIndex]);
     }
 }
