@@ -17,8 +17,6 @@ public class UI : MonoBehaviour
 
         uiController = new UIController(uiDocument.rootVisualElement);
         gameManager = gameManagerObj.GetComponent<GameManager>();
-
-        uiController.OnStart(gameManager.StartGame);
     }
 
     // Update is called once per frame

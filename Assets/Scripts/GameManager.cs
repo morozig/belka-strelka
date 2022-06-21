@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
     {
         spawnManager = GetComponent<SpawnManager>();
         Initialize();
+        State = GameState.Running;
+        spawnManager.SpawnWave(levels[levelIndex].waves[waveIndex]);
     }
 
     // Update is called once per frame
@@ -60,12 +62,5 @@ public class GameManager : MonoBehaviour
             Debug.Log("Game Over");
             State = GameState.Over;
         }
-    }
-
-    public void StartGame() {
-        State = GameState.Running;
-        levelIndex = 0;
-        waveIndex = 0;
-        spawnManager.SpawnWave(levels[levelIndex].waves[waveIndex]);
     }
 }
