@@ -1,0 +1,42 @@
+.Dialog {
+    width: 300px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    background-color: rgba(30, 56, 173, 255);
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    align-items: center;
+}
+
+.Text {
+    margin-top: 20px;
+    -unity-text-align: upper-center;
+    font-size: 30px;
+    -unity-font-style: bold;
+    color: rgba(107, 254, 255, 255);
+    margin-bottom: 20px;
+}
+
+.Button {
+    width: 60%;
+    font-size: 24px;
+    -unity-font-style: normal;
+    border-left-color: rgb(107, 254, 255);
+    border-right-color: rgb(107, 254, 255);
+    border-top-color: rgb(107, 254, 255);
+    border-bottom-color: rgb(107, 254, 255);
+    background-color: rgba(0, 0, 0, 0);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    color: rgb(107, 254, 255);
+}
+
+.Button:hover {
+    -unity-font-style: bold;
+}

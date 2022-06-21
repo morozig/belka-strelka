@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/GameOver.style.uss?fileID=7433441132597879392&amp;guid=4e24b957a50eafc4abd29debb49cec33&amp;type=3#GameOver.style" />
+    <ui:VisualElement class="Dialog">
+        <ui:Label text="Game Over" display-tooltip-when-elided="true" class="Text" />
+        <ui:Button text="Restart" display-tooltip-when-elided="true" name="Restart" focusable="false" class="Button" />
+    </ui:VisualElement>
+</ui:UXML>

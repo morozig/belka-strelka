@@ -17,6 +17,8 @@ public class UI : MonoBehaviour
 
         uiController = new UIController(uiDocument.rootVisualElement);
         gameManager = gameManagerObj.GetComponent<GameManager>();
+
+        uiController.OnRestart(OnRestart);
     }
 
     // Update is called once per frame
@@ -28,5 +30,13 @@ public class UI : MonoBehaviour
             uiController.SetLives(lives);
             currentLives = lives;
         }
+
+        if (lives <= 0) {
+            uiController.GameOver();
+        }
+    }
+
+    private void OnRestart() {
+        gameManager.Restart();
     }
 }

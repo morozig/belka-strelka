@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GameQuadrant {
     TopLeft,
@@ -54,13 +55,26 @@ public class GameManager : MonoBehaviour
                 State = GameState.Over;
             }
         }
+
+        if (lives <= 0) {
+            State = GameState.Over;
+
+            var players = FindObjectsOfType<Player>();
+
+            foreach(var playerObj in players) {
+                Destroy(playerObj.gameObject);
+            }
+
+            Time.timeScale = 0.2f;
+        }
     }
 
     public void DamagePlayer() {
         lives -= 1;
-        if (lives <= 0) {
-            Debug.Log("Game Over");
-            State = GameState.Over;
-        }
+    }
+
+    public void Restart() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
     }
 }
