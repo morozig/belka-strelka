@@ -1,7 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="GameOverlay" src="project://database/Assets/UI/GameOverlay.uxml?fileID=9197481963319205126&amp;guid=b40a42433706ba248a1b41b2d72fa39c&amp;type=3#GameOverlay" />
     <ui:Template name="GameOver" src="project://database/Assets/UI/GameOver.uxml?fileID=9197481963319205126&amp;guid=be70e704cdd2ab54fbd2f33df1cb7281&amp;type=3#GameOver" />
+    <ui:Template name="Victory" src="project://database/Assets/UI/Victory.uxml?fileID=9197481963319205126&amp;guid=1e087a8d526f7d94db35fa159c88c998&amp;type=3#Victory" />
     <Style src="project://database/Assets/UI/UI.style.uss?fileID=7433441132597879392&amp;guid=8738b0d5840adcc4fa95f1590980baa2&amp;type=3#UI.style" />
     <ui:Instance template="GameOverlay" name="GameOverlay" />
     <ui:Instance template="GameOver" name="GameOver" style="display: none;" />
+    <ui:Instance template="Victory" name="Victory" style="display: none;" />
 </ui:UXML>

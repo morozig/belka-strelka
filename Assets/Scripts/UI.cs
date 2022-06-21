@@ -31,8 +31,12 @@ public class UI : MonoBehaviour
             currentLives = lives;
         }
 
-        if (lives <= 0) {
+        var gameState = gameManager.State;
+
+        if (gameState == GameState.Over) {
             uiController.GameOver();
+        } else if (gameState == GameState.Victory) {
+            uiController.Victory();
         }
     }
 

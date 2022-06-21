@@ -14,6 +14,7 @@ public enum GameState {
     Idle,
     Running,
     Over,
+    Victory,
 }
 
 public class GameManager : MonoBehaviour
@@ -51,8 +52,7 @@ public class GameManager : MonoBehaviour
             if (levelIndex < levels.Length) {
                 spawnManager.SpawnWave(levels[levelIndex].waves[waveIndex]);
             } else {
-                Debug.Log("Victory!");
-                State = GameState.Over;
+                State = GameState.Victory;
             }
         }
 

@@ -1,0 +1,34 @@
+.Container {
+    flex-grow: 1;
+    background-color: rgba(17, 28, 96, 255);
+    align-items: center;
+}
+
+.Title {
+    font-size: 30px;
+    -unity-font-style: bold;
+    color: rgba(107, 254, 255, 255);
+    -unity-text-align: upper-center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Button {
+    width: 60%;
+    font-size: 24px;
+    -unity-font-style: normal;
+    border-left-color: rgb(107, 254, 255);
+    border-right-color: rgb(107, 254, 255);
+    border-top-color: rgb(107, 254, 255);
+    border-bottom-color: rgb(107, 254, 255);
+    background-color: rgba(0, 0, 0, 0);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    color: rgb(107, 254, 255);
+}
+
+.Button:hover {
+    -unity-font-style: bold;
+}
