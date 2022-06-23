@@ -22,8 +22,10 @@ public class GameManager : MonoBehaviour
     public Level[] levels;
     public int lives = 3;
     public GameState State { get; private set; } = GameState.Idle;
+    public GameObject music;
 
     private SpawnManager spawnManager;
+    private AudioSource audioSource;
     private int levelIndex = 0;
     private int waveIndex = 0;
 
@@ -38,6 +40,7 @@ public class GameManager : MonoBehaviour
         Initialize();
         State = GameState.Running;
         spawnManager.SpawnWave(levels[levelIndex].waves[waveIndex]);
+        audioSource = music.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -66,6 +69,8 @@ public class GameManager : MonoBehaviour
             }
 
             Time.timeScale = 0.2f;
+            audioSource.Stop();
+            audioSource.loop = false;
         }
     }
 

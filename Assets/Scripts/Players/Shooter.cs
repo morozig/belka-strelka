@@ -10,11 +10,13 @@ public class Shooter : MonoBehaviour
     private bool isShooting;
     private float lastShootTime;
     private float shootDelay = 1;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GetComponent<Player>();    
+        player = GetComponent<Player>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -127,6 +129,12 @@ public class Shooter : MonoBehaviour
     }
     private void ShootRed() {
         var level = GetWeaponLevel();
+
+        var audioClip = player.props.shotSounds[0];
+        audioSource.clip = audioClip;
+        audioSource.volume = (float) level / 5;
+        audioSource.Play();
+
         switch (level) {
             case 1: {
                 ShootRedDirection(0);
@@ -190,6 +198,12 @@ public class Shooter : MonoBehaviour
     private void ShootGreen() {
         var direction = player.direction;
         var level = GetWeaponLevel();
+
+        var audioClip = player.props.shotSounds[1];
+        audioSource.clip = audioClip;
+        audioSource.volume = (float) level / 5;
+        audioSource.Play();
+
         switch (level) {
             case 1: {
                 ShootGreenLine(direction * 0.9f);
@@ -223,8 +237,15 @@ public class Shooter : MonoBehaviour
 
     private void ShootYellow() {
         var direction = player.direction;
-        var damage = GetWeaponLevel();
+        var level = GetWeaponLevel();
+        var damage = level;
         var scale = damage;
+
+        var audioClip = player.props.shotSounds[2];
+        audioSource.clip = audioClip;
+        audioSource.volume = (float) level / 5;
+        audioSource.Play();
+
         var offset = new Vector3(
             direction.x,
             direction.y * 5 * 1.28f

@@ -12,4 +12,5 @@ public class PlayerProps : ScriptableObject
     public float[] weaponAtackSpeeds;
     public float stunSpeed = 1;
     public float stunDuration = 1;
+    public AudioClip[] shotSounds;
 }

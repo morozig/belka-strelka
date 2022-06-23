@@ -25,3 +25,7 @@ MonoBehaviour:
   - 1
   stunSpeed: 1
   stunDuration: 1
+  shotSounds:
+  - {fileID: 8300000, guid: 25f55d6cf8e87d641a80653cb9f7ce5a, type: 3}
+  - {fileID: 8300000, guid: 0aaf282bc70cb85489c64d75223c53db, type: 3}
+  - {fileID: 8300000, guid: 10a9b40b42e567e4d988f079c0cc41cc, type: 3}

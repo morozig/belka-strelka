@@ -60,3 +60,4 @@ crashlytics-build.properties
 
 /UserSettings
 /Art/Images/**/*.png
+/Art/Sounds/**/*.mp3
