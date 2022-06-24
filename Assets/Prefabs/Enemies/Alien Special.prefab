@@ -153,6 +153,8 @@ MonoBehaviour:
   health: 15
   dropRate: 0.5
   platoonObj: {fileID: 0}
+  flipRight: 0
+  explosionPrefab: {fileID: 7860559699283453863, guid: 81e8f7fe2d1e3f449a1b118766f6bd66, type: 3}
 --- !u!114 &-4413663801505604892
 MonoBehaviour:
   m_ObjectHideFlags: 0

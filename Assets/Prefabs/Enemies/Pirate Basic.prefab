@@ -171,3 +171,4 @@ MonoBehaviour:
   dropRate: 0.1
   platoonObj: {fileID: 0}
   flipRight: 1
+  explosionPrefab: {fileID: 7860559699283453863, guid: b7e0e2c99652e9c4982ca2b67535e227, type: 3}

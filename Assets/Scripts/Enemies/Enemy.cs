@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public float dropRate;
     public GameObject platoonObj;
     public bool flipRight;
+    public GameObject explosionPrefab;
 
     private int maxHealth;
     private SpriteRenderer spriteRenderer;
@@ -37,6 +38,8 @@ public class Enemy : MonoBehaviour
                 );
             } else {
                 Destroy(gameObject);
+                Explode();
+
                 var dropProb = Random.value;
 
                 if (dropProb <= dropRate) {
@@ -55,5 +58,13 @@ public class Enemy : MonoBehaviour
 
         bonus.GetComponent<MoveInDirection>()
             .direction = direction;
+    }
+
+    private void Explode() {
+        GameObject.Instantiate(
+            explosionPrefab,
+            transform.position,
+            explosionPrefab.transform.rotation
+        );
     }
 }
