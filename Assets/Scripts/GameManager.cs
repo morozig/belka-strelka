@@ -23,11 +23,14 @@ public class GameManager : MonoBehaviour
     public int lives = 3;
     public GameState State { get; private set; } = GameState.Idle;
     public GameObject music;
+    public GameObject vcamObj;
 
     private SpawnManager spawnManager;
-    private AudioSource audioSource;
+    private AudioSource musicSource;
+    private AudioSource crushSource;
     private int levelIndex = 0;
     private int waveIndex = 0;
+    private Vcam vcam;
 
     private void Initialize() {
         Random.Range(0, 2);
@@ -40,7 +43,9 @@ public class GameManager : MonoBehaviour
         Initialize();
         State = GameState.Running;
         spawnManager.SpawnWave(levels[levelIndex].waves[waveIndex]);
-        audioSource = music.GetComponent<AudioSource>();
+        musicSource = music.GetComponent<AudioSource>();
+        crushSource = GetComponent<AudioSource>();
+        vcam = vcamObj.GetComponent<Vcam>();
     }
 
     // Update is called once per frame
@@ -69,13 +74,16 @@ public class GameManager : MonoBehaviour
             }
 
             Time.timeScale = 0.2f;
-            audioSource.Stop();
-            audioSource.loop = false;
+            musicSource.Stop();
+            musicSource.loop = false;
+            vcam.StopShake();
         }
     }
 
     public void DamagePlayer() {
         lives -= 1;
+        crushSource.Play();
+        vcam.Shake();
     }
 
     public void Restart() {
