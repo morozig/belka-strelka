@@ -2,6 +2,11 @@
     <Style src="project://database/Assets/UI/GameOverlay.style.uss?fileID=7433441132597879392&amp;guid=723e642dc772ce44694e5608298124e0&amp;type=3#GameOverlay.style" />
     <ui:VisualElement class="TopBar">
         <ui:VisualElement class="Heart" />
-        <ui:Label text="03" display-tooltip-when-elided="true" name="Lives" class="Text" />
+        <ui:Label text="03" display-tooltip-when-elided="true" name="Lives" class="TopBar-text" />
+    </ui:VisualElement>
+    <ui:Label text="Level" display-tooltip-when-elided="true" name="Level" class="Level" />
+    <ui:VisualElement name="Controls" class="Controls">
+        <ui:Label text="WASD + SPACE" display-tooltip-when-elided="true" class="Controls-keyboard" style="opacity: 1;" />
+        <ui:Label text="MOUSE + LMB" display-tooltip-when-elided="true" class="Controls-mouse" />
     </ui:VisualElement>
 </ui:UXML>

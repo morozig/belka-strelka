@@ -24,6 +24,16 @@ public class GameManager : MonoBehaviour
     public GameState State { get; private set; } = GameState.Idle;
     public GameObject music;
     public GameObject vcamObj;
+    public int Level {
+        get {
+            return levelIndex + 1;
+        }
+    }
+    public int LevelsCount {
+        get {
+            return levels.Length;
+        }
+    }
 
     private SpawnManager spawnManager;
     private AudioSource musicSource;

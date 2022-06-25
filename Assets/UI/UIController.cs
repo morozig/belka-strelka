@@ -30,6 +30,11 @@ public class UIController
         gameOverlayController.SetLives(lives);
     }
 
+    public void StartLevel(int level, int of)
+    {
+        gameOverlayController.StartLevel(level, of);
+    }
+
     public void OnRestart(Action onRestart)
     {
         gameOverController.OnRestart(onRestart);

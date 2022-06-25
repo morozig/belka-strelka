@@ -10,6 +10,7 @@ public class UI : MonoBehaviour
     private UIController uiController;
     private GameManager gameManager;
     private int currentLives = 3;
+    private int currentLevel;
 
     void OnEnable()
     {
@@ -25,10 +26,16 @@ public class UI : MonoBehaviour
     void Update()
     {
         var lives = gameManager.lives;
-
         if (lives != currentLives) {
             uiController.SetLives(lives);
             currentLives = lives;
+        }
+
+        var level = gameManager.Level;
+        var of = gameManager.LevelsCount;
+        if (level != currentLevel) {
+            uiController.StartLevel(level, of);
+            currentLevel = level;
         }
 
         var gameState = gameManager.State;

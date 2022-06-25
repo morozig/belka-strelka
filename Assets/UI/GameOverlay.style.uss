@@ -1,7 +1,7 @@
 .TopBar {
     flex-direction: row;
     height: 5%;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-end;
 }
 
@@ -14,9 +14,49 @@
     margin-top: 3px;
 }
 
-.Text {
+.TopBar-text {
     font-size: 16px;
-    color: rgba(255, 255, 255, 255);
+    color: rgb(255, 255, 255);
     -unity-font-style: bold;
     -unity-text-align: middle-left;
+    -unity-font-definition: url('project://database/Assets/Fonts/Roboto-Regular%20SDF.asset?fileID=11400000&guid=7603b2e5cc4552f42a1a9aa5359b6dc9&type=2#Roboto-Regular SDF');
+}
+
+.Level {
+    position: absolute;
+    left: 50%;
+    top: 41%;
+    translate: -50% -50%;
+    -unity-font-definition: url('project://database/Assets/Fonts/Roboto-Regular%20SDF.asset?fileID=11400000&guid=7603b2e5cc4552f42a1a9aa5359b6dc9&type=2#Roboto-Regular SDF');
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    opacity: 0;
+}
+
+.Controls {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    -unity-font-definition: url('project://database/Assets/Fonts/Roboto-Black%20SDF.asset?fileID=11400000&guid=682840ac62afa7a45a6ccdbe0c8cab55&type=2#Roboto-Black SDF');
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    opacity: 1;
+}
+
+.Controls-keyboard {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.Controls-mouse {
+    position: absolute;
+    left: auto;
+    top: auto;
+    right: 10px;
+    bottom: 10px;
 }
