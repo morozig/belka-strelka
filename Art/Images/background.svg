@@ -9,7 +9,7 @@
    id="svg5"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    sodipodi:docname="background.svg"
-   inkscape:export-filename="menu-screen.png"
+   inkscape:export-filename="background.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,9 +28,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.26362494"
-     inkscape:cx="1708.8671"
-     inkscape:cy="1009.0092"
+     inkscape:zoom="0.18641098"
+     inkscape:cx="1697.8613"
+     inkscape:cy="708.11278"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -320,8 +320,8 @@
     <circle
        id="path2788"
        style="fill:#f8f8f8;stroke:#000000;stroke-width:0.225281"
-       cx="118.0188"
-       cy="83.149605"
+       cx="119.69996"
+       cy="97.049667"
        r="1.6879138" />
     <circle
        id="path2790"
@@ -386,9 +386,9 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 3675.6765,553.81709 0.5745,-31.56446 -30.9207,-6.36822 31.5645,0.57457 6.3682,-30.92072 -0.5746,31.56446 30.9207,6.36822 -31.5644,-0.57457 z"
-       transform="matrix(0.22159775,0,0,0.22902514,31.734551,33.061737)"
-       inkscape:transform-center-x="8.1596477e-05"
-       inkscape:transform-center-y="1.9217869e-06" />
+       transform="matrix(0.22041339,-0.02364701,0.02288012,0.22780108,24.202076,120.70629)"
+       inkscape:transform-center-x="0.00010072129"
+       inkscape:transform-center-y="-9.0083611e-05" />
     <path
        sodipodi:type="star"
        style="fill:#fbfdff;fill-opacity:1;stroke-width:2.25281;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
@@ -404,7 +404,7 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 3789.4746,1577.9993 -6.1155,-65.9565 -65.9566,-6.1156 65.9566,-6.1155 6.1155,-65.9565 6.1155,65.9565 65.9566,6.1155 -65.9566,6.1156 z"
-       transform="matrix(0.22159775,0,0,0.22902514,31.734551,33.061737)"
+       transform="matrix(0.22159775,0,0,0.22902514,-3.5697935,15.686663)"
        inkscape:transform-center-x="8.3991553e-05"
        inkscape:transform-center-y="5.579891e-06" />
   </g>
