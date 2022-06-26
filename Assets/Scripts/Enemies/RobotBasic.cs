@@ -152,7 +152,7 @@ public class RobotBasic : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.GetComponent<RobotSpecial>()) {
-            if (enemy.health < maxHealth) {
+            if (state == RobotBasicState.Roaming && enemy.health < maxHealth) {
                 enemy.health = maxHealth;
                 var platoon = enemy.platoonObj.GetComponent<Platoon>();
                 transform.parent = enemy.platoonObj.transform;
