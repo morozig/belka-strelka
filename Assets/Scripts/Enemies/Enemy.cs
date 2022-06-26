@@ -27,24 +27,28 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.GetComponent<PlayerShot>()) {
-            var playerShot = other.GetComponent<PlayerShot>();
-            health -= playerShot.damage;
-            if (health > 0) {
-                spriteRenderer.color = new Color(
-                    1.0f,
-                    1.0f * health / maxHealth,
-                    1.0f * health / maxHealth,
-                    1.0f
-                );
-            } else {
-                Destroy(gameObject);
-                Explode();
+            if (gameObject != null) {
+                var playerShot = other.GetComponent<PlayerShot>();
+                health -= playerShot.damage;
+                if (health > 0) {
+                    spriteRenderer.color = new Color(
+                        1.0f,
+                        1.0f * health / maxHealth,
+                        1.0f * health / maxHealth,
+                        1.0f
+                    );
+                } else {
+                    Destroy(gameObject);
+                    Explode();
 
-                var dropProb = Random.value;
+                    var dropProb = Random.value;
 
-                if (dropProb <= dropRate) {
-                    DropBonus();
+                    if (dropProb <= dropRate) {
+                        DropBonus();
+                    }
                 }
+            } else {
+                Debug.Log("Already destroyed");
             }
         }
     }
