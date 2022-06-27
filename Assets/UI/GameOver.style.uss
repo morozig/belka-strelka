@@ -1,15 +1,22 @@
 .Dialog {
     width: 300px;
     height: 200px;
-    left: 50%;
+    left: 49%;
     top: 50%;
     translate: -50% -50%;
-    background-color: rgba(30, 56, 173, 255);
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
     align-items: center;
+    border-left-color: rgba(107, 254, 255, 255);
+    border-right-color: rgba(107, 254, 255, 255);
+    border-top-color: rgba(107, 254, 255, 255);
+    border-bottom-color: rgba(107, 254, 255, 255);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .Text {
@@ -17,14 +24,16 @@
     -unity-text-align: upper-center;
     font-size: 30px;
     -unity-font-style: bold;
-    color: rgba(107, 254, 255, 255);
+    color: rgb(107, 254, 255);
     margin-bottom: 20px;
+    -unity-font-definition: url('project://database/Assets/Fonts/Roboto-Regular%20SDF.asset?fileID=11400000&guid=7603b2e5cc4552f42a1a9aa5359b6dc9&type=2#Roboto-Regular SDF');
+    margin-right: 0;
 }
 
 .Button {
     width: 60%;
     font-size: 24px;
-    -unity-font-style: normal;
+    -unity-font-style: bold;
     border-left-color: rgb(107, 254, 255);
     border-right-color: rgb(107, 254, 255);
     border-top-color: rgb(107, 254, 255);
@@ -35,8 +44,10 @@
     border-top-width: 2px;
     border-bottom-width: 2px;
     color: rgb(107, 254, 255);
+    margin-top: 27px;
+    -unity-font-definition: url('project://database/Assets/Fonts/Roboto-Regular%20SDF.asset?fileID=11400000&guid=7603b2e5cc4552f42a1a9aa5359b6dc9&type=2#Roboto-Regular SDF');
 }
 
 .Button:hover {
-    -unity-font-style: bold;
+    width: 70%;
 }

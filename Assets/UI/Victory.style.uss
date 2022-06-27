@@ -1,22 +1,49 @@
-.Container {
-    flex-grow: 1;
-    background-color: rgba(17, 28, 96, 255);
-    align-items: center;
+.Dialog {
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+    border-left-color: rgb(107, 254, 255);
+    border-right-color: rgb(107, 254, 255);
+    border-top-color: rgb(107, 254, 255);
+    border-bottom-color: rgb(107, 254, 255);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 100%;
 }
 
 .Title {
     font-size: 30px;
     -unity-font-style: bold;
-    color: rgba(107, 254, 255, 255);
+    color: rgb(107, 254, 255);
     -unity-text-align: upper-center;
     margin-top: 20px;
     margin-bottom: 20px;
+    -unity-font-definition: url('project://database/Assets/Fonts/Roboto-Regular%20SDF.asset?fileID=11400000&guid=7603b2e5cc4552f42a1a9aa5359b6dc9&type=2#Roboto-Regular SDF');
+}
+
+.Image {
+    width: 413px;
+    height: 235px;
+    background-image: url('project://database/Assets/Sprites/UI/belka-strelka.jpg?fileID=2800000&guid=4a43bbfa48408614381ffe105df98d3f&type=3#belka-strelka');
+    -unity-background-scale-mode: stretch-to-fill;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .Button {
-    width: 60%;
+    width: 200px;
     font-size: 24px;
-    -unity-font-style: normal;
+    -unity-font-style: bold;
     border-left-color: rgb(107, 254, 255);
     border-right-color: rgb(107, 254, 255);
     border-top-color: rgb(107, 254, 255);
@@ -27,8 +54,25 @@
     border-top-width: 2px;
     border-bottom-width: 2px;
     color: rgb(107, 254, 255);
+    margin-top: 20px;
+    -unity-font-definition: url('project://database/Assets/Fonts/Roboto-Regular%20SDF.asset?fileID=11400000&guid=7603b2e5cc4552f42a1a9aa5359b6dc9&type=2#Roboto-Regular SDF');
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .Button:hover {
-    -unity-font-style: bold;
+    width: 250px;
+}
+
+.Text {
+    white-space: normal;
+    width: 413px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    -unity-font-definition: url('project://database/Assets/Fonts/Roboto-Regular%20SDF.asset?fileID=11400000&guid=7603b2e5cc4552f42a1a9aa5359b6dc9&type=2#Roboto-Regular SDF');
+    font-size: 18px;
+    color: rgb(107, 254, 255);
+    -unity-text-align: upper-center;
 }

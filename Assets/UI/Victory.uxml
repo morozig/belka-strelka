@@ -1,7 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Victory.style.uss?fileID=7433441132597879392&amp;guid=c6600e7319c6731428fa2a0dc33f1254&amp;type=3#Victory.style" />
-    <ui:VisualElement class="Container">
+    <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" class="Dialog">
         <ui:Label text="Victory!" display-tooltip-when-elided="true" class="Title" />
+        <ui:VisualElement class="Image" />
+        <ui:Label display-tooltip-when-elided="true" text="Belka and Strelka were the first animals to travel to outer space and return safely to Earth in 1960. Strelka went on to have 6 healthy puppies." class="Text" />
         <ui:Button text="Restart" display-tooltip-when-elided="true" name="Restart" focusable="false" class="Button" />
-    </ui:VisualElement>
+    </ui:ScrollView>
 </ui:UXML>
