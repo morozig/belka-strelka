@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f077b343a8f2a08418734af04aea7203, type: 3}
   m_Name: PlayerProps
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 10
   width: 1
   height: 1
   shotPrefabs:
