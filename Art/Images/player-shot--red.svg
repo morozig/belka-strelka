@@ -32,14 +32,14 @@
      showgrid="false"
      showborder="true"
      inkscape:zoom="2.6456983"
-     inkscape:cx="89.768361"
+     inkscape:cx="90.146333"
      inkscape:cy="77.862242"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer2">
+     inkscape:current-layer="layer1">
     <inkscape:grid
        type="xygrid"
        id="grid28123" />
@@ -48,72 +48,40 @@
      id="defs2">
     <linearGradient
        inkscape:collect="always"
-       id="linearGradient1040">
-      <stop
-         style="stop-color:#df1717;stop-opacity:1;"
-         offset="0.76902884"
-         id="stop1036" />
-      <stop
-         style="stop-color:#ff4b4b;stop-opacity:0;"
-         offset="1"
-         id="stop1038" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
        id="linearGradient833">
       <stop
-         style="stop-color:#ff4444;stop-opacity:1;"
-         offset="0.31496063"
+         style="stop-color:#fbeded;stop-opacity:1;"
+         offset="0.10498688"
          id="stop829" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
+         style="stop-color:#ff0800;stop-opacity:1;"
          offset="0.5"
          id="stop965" />
       <stop
-         style="stop-color:#ff4444;stop-opacity:1;"
-         offset="0.69553804"
+         style="stop-color:#fbeded;stop-opacity:1;"
+         offset="0.89501309"
          id="stop831" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient833"
        id="linearGradient967"
-       x1="45.663677"
-       y1="53.042065"
-       x2="83.011765"
-       y2="72.96843"
-       gradientUnits="userSpaceOnUse" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient1040"
-       id="radialGradient1042"
-       cx="64"
-       cy="64"
-       fx="64"
-       fy="64"
-       r="19.843533"
-       gradientTransform="matrix(1,0,0,2.304762,0,-83.504766)"
-       gradientUnits="userSpaceOnUse" />
+       x1="40.307896"
+       y1="63.65136"
+       x2="87.692108"
+       y2="63.288666"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.4547759,0,0,1,-29.105658,0)" />
   </defs>
-  <g
-     inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="Слой 2">
-    <ellipse
-       style="fill:url(#radialGradient1042);stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke;fill-opacity:1"
-       id="path1034"
-       cx="64"
-       cy="64"
-       rx="19.843533"
-       ry="45.734619" />
-  </g>
   <g
      inkscape:label="Слой 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="matrix(0.56127869,0,0,1,28.078164,-4.5e-6)"
+     style="stroke-width:1.33478">
     <path
-       style="fill:url(#linearGradient967);fill-opacity:1;stroke:none;stroke-width:4.31968;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
-       d="M 64.600203,15.530609 87.692105,63.288667 63.912316,112.4694 40.307895,63.65136 Z"
+       style="fill:url(#linearGradient967);fill-opacity:1;stroke:none;stroke-width:5.76584;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="M 64.87316,15.530609 98.466703,63.288667 63.872439,112.4694 29.533296,63.65136 Z"
        id="path26081" />
   </g>
   <metadata
