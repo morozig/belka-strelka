@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; -unity-font-definition: url(&apos;project://database/Assets/Fonts/Roboto-Black%20SDF.asset?fileID=11400000&amp;guid=682840ac62afa7a45a6ccdbe0c8cab55&amp;type=2#Roboto-Black SDF&apos;); -unity-font-style: bold; color: rgb(107, 254, 255); font-size: 78px;">
+        <ui:Label text="Belka" display-tooltip-when-elided="true" style="position: absolute; top: 25%; left: auto; right: 35%; translate: 50% -50%;" />
+        <ui:Label text="&amp;" display-tooltip-when-elided="true" style="position: absolute; top: 50%; left: 50%; translate: -50% -50%;" />
+        <ui:Label text="Strelka" display-tooltip-when-elided="true" style="position: absolute; top: auto; left: 35%; bottom: 25%; translate: -50% 50%;" />
+    </ui:VisualElement>
+</ui:UXML>
