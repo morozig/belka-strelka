@@ -39,16 +39,9 @@ jobs:
         with:
           targetPlatform: WebGL
           versioning: Semantic
-          
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: build
-          path: |
-            build
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build/WebGL
+          publish_dir: build/WebGL/WebGL
