@@ -20,21 +20,21 @@
    xmlns:cc="http://creativecommons.org/ns#">
   <sodipodi:namedview
      id="namedview7"
-     pagecolor="#ffffff"
+     pagecolor="#0817bd"
      bordercolor="#000000"
      borderopacity="0.25"
      inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      showgrid="false"
      showborder="true"
-     inkscape:zoom="2.6456983"
-     inkscape:cx="-10.016259"
-     inkscape:cy="66.145108"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
+     inkscape:zoom="5.2913966"
+     inkscape:cx="49.797817"
+     inkscape:cy="46.868534"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -46,9 +46,19 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#217821;fill-opacity:1;stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
-       d="M 63.121332,6.0475527 122.92437,113.83415 62.967111,97.437681 5.493985,112.83756 Z"
+       style="fill:#2aae2a;fill-opacity:1;stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="M 64,5 123,120 64,100 5,120 Z"
        id="path7232"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Слой 2">
+    <path
+       style="fill:#4a4a4a;fill-opacity:1;stroke:#4a4a4a;stroke-width:3.77953;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 64,40 9,20 -9,-2 -9,2 z"
+       id="path6386"
        sodipodi:nodetypes="ccccc" />
   </g>
   <metadata

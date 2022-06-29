@@ -20,25 +20,30 @@
    xmlns:cc="http://creativecommons.org/ns#">
   <sodipodi:namedview
      id="namedview7"
-     pagecolor="#ffffff"
+     pagecolor="#2451e9"
      bordercolor="#000000"
      borderopacity="0.25"
      inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      showgrid="false"
      showborder="true"
-     inkscape:zoom="2.6456983"
-     inkscape:cx="66.712066"
-     inkscape:cy="63.121332"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
+     inkscape:zoom="5.2913966"
+     inkscape:cx="64.727713"
+     inkscape:cy="67.090038"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     showguides="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1698" />
+  </sodipodi:namedview>
   <defs
      id="defs2" />
   <g
@@ -46,10 +51,20 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#ffcc00;stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
-       d="M 48.956713,36 H 77 V 5 L 122.3445,52.41127 82.830109,123 H 44.793302 L 6.2289849,52.41127 48.010008,5 Z"
+       style="fill:#ffcc00;fill-opacity:1;stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 50,50 H 78 L 98,5 h 25 l -10,40 10,35 -40,43 H 45 L 5,80 15,45 5,5 h 25 z"
        id="path1333"
-       sodipodi:nodetypes="ccccccccc" />
+       sodipodi:nodetypes="ccccccccccccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Слой 2">
+    <path
+       style="fill:#4a4a4a;fill-opacity:1;stroke:#4a4a4a;stroke-width:3.77953;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 55,90 h 18 l -5,10 h -8 z"
+       id="path1766"
+       sodipodi:nodetypes="ccccc" />
   </g>
   <metadata
      id="metadata9">
