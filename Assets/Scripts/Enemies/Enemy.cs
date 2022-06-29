@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
 
     private int maxHealth;
     private SpriteRenderer spriteRenderer;
+    private bool isDestroyed;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.GetComponent<PlayerShot>()) {
-            if (gameObject != null) {
+            if (!isDestroyed) {
                 var playerShot = other.GetComponent<PlayerShot>();
                 health -= playerShot.damage;
                 if (health > 0) {
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
                         1.0f
                     );
                 } else {
+                    isDestroyed = true;
                     Destroy(gameObject);
                     Explode();
 
@@ -47,8 +49,6 @@ public class Enemy : MonoBehaviour
                         DropBonus();
                     }
                 }
-            } else {
-                Debug.Log("Already destroyed");
             }
         }
     }
